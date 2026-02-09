@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -461,6 +466,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Эндпоинты задач
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -478,6 +503,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Общая информация
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Получение списка задач
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -590,6 +656,38 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Общая информация
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Получение списка задач
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -609,9 +707,29 @@
   
 
 
-  <h1>Эндпоинты задач</h1>
-
-
+<h1 id="api">Справочник API — Эндпоинты задач</h1>
+<p>Этот раздел описывает основные эндпоинты API для работы с задачами в TaskTracker. Используйте их для создания, получения, обновления и удаления задач, а также для автоматизации рабочих процессов.</p>
+<h2 id="_1">Общая информация</h2>
+<ul>
+<li>Базовый URL: <code>https://api.tasktracker.example.com/v1</code></li>
+<li>Формат данных: JSON</li>
+<li>Аутентификация: Bearer Token (передаётся в заголовке <code>Authorization</code>)</li>
+</ul>
+<p>Пример заголовка:</p>
+<h2 id="1">1. Получение списка задач</h2>
+<p>Возвращает список всех задач, доступных текущему пользователю.</p>
+<p><strong>Запрос</strong></p>
+<p><strong>Пример ответа</strong>
+```json
+[
+  {
+    "id": 101,
+    "title": "Проанализировать требования",
+    "status": "in_progress",
+    "assignee": "albert.mardanov",
+    "created_at": "2026-02-01T10:15:00Z"
+  }
+]</p>
 
 
 
