@@ -1,1 +1,24 @@
-site_name: My Docs
+site_name: Документация проекта "TaskTracker"
+site_description: Руководство пользователя и API для системы управления задачами.
+site_author: Альберт Марданов
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+repo_url: https://github.com/your-username/tasktracker-docs
+nav:
+  - Введение: index.md
+  - Руководство пользователя:
+    - Быстрый старт: user-guide/quick-start.md
+    - Работа с задачами: user-guide/tasks.md
+  - Справочник API:
+    - Обзор API: api/overview.md
+    - Эндпоинты задач: api/endpoints/tasks.md
+  - Для разработчиков:
+    - Установка для разработки: dev/setup.md
+markdown_extensions:
+  - admonition  # для блоков-предупреждений
+  - codehilite # для подсветки кода
+  - tables     # для таблиц
